@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Capsule 🏊</title>
+	</head>
+	<body>
+		<div class="overlay"></div>
+		<div class="toll-bar">
+			<input
+				type="text"
+				name="input"
+				class="search-input"
+				placeholder="Type To Search"
+			/>
+			<select name="sort-by">
+				<option value="sort-by">Sort by :</option>
+				<option value="firstName">firstName</option>
+				<option value="lastName">lastName</option>
+				<option value="city">city</option>
+				<option value="gender">gender</option>
+				<option value="capsule">capsule</option>
+				<option value="age">age</option>
+			</select>
+			<button class="reset">Reset localStorage</button>
+		</div>
+		<div class="table-container"></div>
+		<!-- edit pop-up -->
+		<div class="edit-pop-container"></div>
+		<!-- loader -->
+		<div class="container">
+			<div class="yellow"></div>
+			<div class="red"></div>
+			<div class="blue"></div>
+			<div class="violet"></div>
+		</div>
+		<div class="joke-container">
+			<h1 class="joke"></h1>
+			<button class="close-joke">close</button>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
