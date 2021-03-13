@@ -263,3 +263,59 @@ div.container > div {
 		transform: scale(1.4);
 	}
 }
+
+@media only screen and (max-width: 830px) {
+	/* For mobile phones: */
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	body {
+		position: relative;
+	}
+	.box {
+		height: 1.2rem;
+		font-size: 0.8rem;
+		width: 100%;
+		/* white-space: nowrap; */
+	}
+	.edit-pop-container {
+		width: 17rem;
+		height: 10rem;
+		top: 25%;
+		left: 29%;
+		box-shadow: 0.5rem 0.5rem black;
+	}
+}
+@media only screen and (max-width: 380px) {
+	/* For mobile phones: */
+	html,
+	body {
+		overflow-x: hidden;
+	}
+	body {
+		position: relative;
+	}
+	.table-container {
+		width: 70%%;
+		/* height: 100vh; */
+	}
+	.box {
+		height: 1.2rem;
+		font-size: 0.3rem;
+		width: 100%;
+		/* white-space: nowrap; */
+	}
+	.edit-pop-container {
+		width: 17rem;
+		height: 10rem;
+		top: 15%;
+		left: 15%;
+		box-shadow: 0.5rem 0.5rem black;
+	}
+	.joke-container {
+		width: 16rem;
+		top: 15%;
+		left: 15%;
+	}
+}
