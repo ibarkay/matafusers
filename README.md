@@ -17,7 +17,7 @@ you can Click on any First-name to get Extra Joke:).
 
 ### Demo picture
 
-![alt text]('./screens/1.png')
+![alt text](./screens/1.png)
 
 ## Usage <a name = "usage"></a>
 
