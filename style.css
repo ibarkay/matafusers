@@ -9,15 +9,23 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+@font-face {
+	font-family: "MyWebFont";
+	src: url("./fonts/Barlow_Condensed/BarlowCondensed-Medium.ttf")
+		format("truetype");
+}
 body {
-	font-family: "Courier New", Courier, monospace;
+	font-family: MyWebFont;
 	color: #3d3d3d;
-	background: #da00f7;
+	background: url("./5097411.png") center/cover ;
 }
 
 .toll-bar {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 1.2rem;
+
+	width: 100%;
 }
 .table-container {
 	width: 100%;
@@ -26,9 +34,9 @@ body {
 	justify-content: center;
 }
 .joke-container {
-	width: 30rem;
+	width: 40rem;
 	height: auto;
-	background: #da00f7;
+	background: #43cfda;
 	border: 2px black solid;
 	position: absolute;
 	display: flex;
@@ -37,8 +45,12 @@ body {
 	align-items: center;
 	box-shadow: 3px 3px black;
 	top: 25%;
-	left: 30%;
+	left: 25%;
 	visibility: hidden;
+}
+.joke-container h1 {
+	font-size: 1.4rem;
+	color: black;
 }
 .name-s:hover {
 	border: #00dbf9 2px solid;
@@ -63,45 +75,104 @@ body {
 	position: absolute;
 	top: 30vh;
 	left: 30%;
-	background: #da00f7;
+	background: #43cfda;
 	box-shadow: 1rem 1rem black;
 	visibility: hidden;
 }
 .edit-pop-container > input {
 	width: 80%;
 }
+input {
+	text-align: center;
+}
+.cancel-btn,
+.save-btn {
+	background: #a5e4ec;
+}
 .box {
 	height: 1.8rem;
 	width: 100%;
 	white-space: nowrap;
 	display: flex;
-	border: 1px solid black;
-	justify-content: space-around;
-	background: #feb60a;
+	border-bottom: 1px solid black;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.651);
+}
+.name-s {
 	font-weight: bold;
 }
 .boxHide {
 	border: 0px black solid;
+	background: none;
+}
+/*  */
+
+/* width */
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #028c9e;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #028c9e;
+}
+
+.search-input {
+	text-align: center;
+	font-family: "MyWebFont";
+	width: 300px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	background-color: #028c9e;
+	color: white;
 }
 .box:hover {
 	cursor: pointer;
 }
+select {
+	font-family: "MyWebFont";
+	font-size: 1.2rem;
+	background: #4cb6c4;
+	font-weight: bold;
+}
+.reset {
+	background: #95e4ee;
+	border: none;
+	margin: 0;
+}
 button {
 	margin: 2px;
-	border-radius: 3px;
+	/* border-radius: 3px; */
 	padding: 3px 5px;
-	background: #00dbf9;
-	border: #da00f7 solid 1px;
+	background: #028c9e;
+	border: #028c9e solid 1px;
 	display: flex;
-	color: #3d3d3d;
+	color: #080808;
+	font-weight: bold;
+
 	transition: all ease-in-out 0.2s;
+	font-family: "MyWebFont";
 }
 button:hover {
 	background: #028c9e;
-	color: #929191;
+	color: #d6d3d3;
+	cursor: pointer;
 }
 .title {
-	background: #c7900e;
+	background: #028c9e;
 	font-size: 1.2rem;
 	display: flex;
 	justify-content: center;
@@ -109,6 +180,10 @@ button:hover {
 	border: 0;
 	/* border-right: 1px black solid; */
 	padding: 2px 10px;
+	color: black;
+}
+::placeholder {
+	color: black;
 }
 .overlay {
 	width: 100%;

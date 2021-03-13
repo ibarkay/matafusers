@@ -11,19 +11,11 @@ const jokeContainer = document.querySelector(".joke-container");
 const jokeHeader = document.querySelector(".joke");
 const closeJoke = document.querySelector(".close-joke");
 
-// ev on Select-menu
-selectDropDown.addEventListener("change", () => {
-	sortByParam(selectDropDown.value);
-});
-// ev on close-joke btn
-closeJoke.addEventListener("click", () => {
-	jokeContainer.style.visibility = "hidden";
-});
-
 // * API's url
 const usersAPI = "https://apple-seeds.herokuapp.com/api/users/";
 const userExtraAPI = "https://apple-seeds.herokuapp.com/api/users/";
 const jokeAPI = async function joke(fname, lastname) {
+	overlay.style.visibility = "visible";
 	let resp = await fetch(
 		`http://api.icndb.com/jokes/random?firstName=${fname}&lastName=${lastname}`
 	);
@@ -54,6 +46,15 @@ async function fetchy() {
 	}
 }
 // ---------------------------
+// ev on Select-menu
+selectDropDown.addEventListener("change", () => {
+	sortByParam(selectDropDown.value);
+});
+// ev on close-joke btn
+closeJoke.addEventListener("click", () => {
+	overlay.style.visibility = "hidden";
+	jokeContainer.style.visibility = "hidden";
+});
 // ev on search input
 searchInput.addEventListener("input", (e) => {
 	searcher(searchInput.value);
@@ -132,9 +133,9 @@ async function run() {
 // ---------------------------
 function render(array = dataLocal) {
 	console.log(`trying to make datalocal to localstorage`);
-
+	// sync between datalocal and local storage
 	localStorage.data = JSON.stringify(dataLocal);
-	//
+	// clear the table
 	tableContainer.innerHTML = "";
 	// crate list of tittles
 	const titles = Object.keys(dataLocal[0]);
@@ -153,7 +154,6 @@ function render(array = dataLocal) {
 			divFirst.classList.add("boxHide");
 		}
 		divFirst.classList.add("box");
-
 		divTitle.append(divFirst);
 
 		for (const j of array) {
