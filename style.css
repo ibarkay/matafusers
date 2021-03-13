@@ -303,7 +303,7 @@ div.container > div {
 	.box {
 		height: 1.2rem;
 		font-size: 0.1rem;
-		width: 100%;
+		width: auto;
 		/* white-space: nowrap; */
 	}
 	.edit-pop-container {
