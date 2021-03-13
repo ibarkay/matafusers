@@ -297,8 +297,8 @@ div.container > div {
 		position: relative;
 	}
 	.table-container {
-		width: 70%%;
-		/* height: 100vh; */
+		width: auto;
+		/* height: auto; */
 	}
 	.box {
 		height: 1.2rem;
