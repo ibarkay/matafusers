@@ -17,7 +17,7 @@ const userExtraAPI = "https://apple-seeds.herokuapp.com/api/users/";
 const jokeAPI = async function joke(fname, lastname) {
 	overlay.style.visibility = "visible";
 	let resp = await fetch(
-		`http://api.icndb.com/jokes/random?firstName=${fname}&lastName=${lastname}`
+		`https://api.icndb.com/jokes/random?firstName=${fname}&lastName=${lastname}`
 	);
 	let jokeData = await resp.json();
 	jokeHeader.textContent = jokeData.value.joke;
