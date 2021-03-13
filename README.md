@@ -1,3 +1,3 @@
 #capsule app
 
-link : c4p5ul3.netlify.app
+[GitHub](http://c4p5ul3.netlify.app)
