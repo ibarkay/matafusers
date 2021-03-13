@@ -314,7 +314,7 @@ div.container > div {
 		box-shadow: 0.5rem 0.5rem black;
 	}
 	.joke-container {
-		width: 16rem;
+		width: 100px;
 		top: 0;
 		left: 0;
 	}
