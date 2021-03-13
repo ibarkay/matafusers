@@ -302,7 +302,7 @@ div.container > div {
 	}
 	.box {
 		height: 1.2rem;
-		font-size: 0.3rem;
+		font-size: 0.36rem;
 		width: auto;
 		/* white-space: nowrap; */
 	}
@@ -315,7 +315,7 @@ div.container > div {
 	}
 	.joke-container {
 		width: 16rem;
-		top: 15%;
-		left: 15%;
+		top: 10%;
+		left: 10%;
 	}
 }
