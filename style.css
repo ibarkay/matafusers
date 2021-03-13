@@ -297,12 +297,12 @@ div.container > div {
 		position: relative;
 	}
 	.table-container {
-		width: auto;
+		width: 100%;
 		/* height: auto; */
 	}
 	.box {
 		height: 1.2rem;
-		font-size: 0.1rem;
+		font-size: 0.3rem;
 		width: auto;
 		/* white-space: nowrap; */
 	}
