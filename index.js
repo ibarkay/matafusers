@@ -15,8 +15,12 @@ const jokeHeader = document.querySelector(".joke");
 const closeJoke = document.querySelector(".close-joke");
 
 // * API's url
-const usersAPI = "https://apple-seeds.herokuapp.com/api/users/";
-const userExtraAPI = "https://apple-seeds.herokuapp.com/api/users/";
+//!work presentetion
+const usersAPI = "https://immense-hollows-06835.herokuapp.com/users";
+const userExtraAPI = "https://immense-hollows-06835.herokuapp.com/users";
+//const usersAPI = "https://apple-seeds.herokuapp.com/api/users/";
+// const userExtraAPI = "https://apple-seeds.herokuapp.com/api/users/";
+
 const jokeAPI = async function joke(fname, lastname) {
 	overlay.style.visibility = "visible";
 	let resp = await fetch(
@@ -113,7 +117,9 @@ async function run() {
 	// merge data to one obj per person
 	for (const person of dataLocal) {
 		async function getExtra() {
-			const resp1 = await fetch(`${userExtraAPI}${person.id}`);
+			// const resp1 = await fetch(`${userExtraAPI}${person.id}`);
+			// !change for API presentetion
+			const resp1 = await fetch(`${userExtraAPI}/${person.id}`);
 			const data1 = await resp1.json();
 			person.age = data1.age;
 			person.city = data1.city;
