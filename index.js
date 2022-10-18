@@ -15,7 +15,7 @@ const jokeHeader = document.querySelector(".joke");
 const closeJoke = document.querySelector(".close-joke");
 
 // * API's url
-//!work presentetion
+//!work presentation
 const usersAPI = "https://immense-hollows-06835.herokuapp.com/users";
 const userExtraAPI = "https://immense-hollows-06835.herokuapp.com/users";
 //const usersAPI = "https://apple-seeds.herokuapp.com/api/users/";
@@ -24,10 +24,13 @@ const userExtraAPI = "https://immense-hollows-06835.herokuapp.com/users";
 const jokeAPI = async function joke(fname, lastname) {
 	overlay.style.visibility = "visible";
 	let resp = await fetch(
-		`https://api.icndb.com/jokes/random?firstName=${fname}&lastName=${lastname}`
+		// `https://api.icndb.com/jokes/random?firstName=${fname}&lastName=${lastname}`
+		`https://api.chucknorris.io/jokes/random`
 	);
 	let jokeData = await resp.json();
-	jokeHeader.textContent = jokeData.value.joke;
+	jokeHeader.textContent = jokeData.value
+		.replace("Chuck", `${fname}`)
+		.replace("Norris", `${lastname}`);
 	jokeContainer.style.visibility = "visible";
 };
 
